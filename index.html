@@ -24,9 +24,9 @@
         </div>
       </div>
       <div class="circle" style="--clr: #04fc43">
-        <div class="dots sec-dot">
+        <div class="dots hr-dot">
           <svg>
-            <circle cx="80" cy="80" r="80" id="ss"></circle>
+            <circle cx="80" cy="80" r="80" id="hh"></circle>
           </svg>
         </div>
       </div>
@@ -44,5 +44,27 @@
 
 
     <!-- javascript js -->
+    <script>
+    setInterval(() =>{
+        let hh =document.getElementById('hh');
+        let mm =document.getElementById('mm');
+        let ss =document.getElementById('ss');
+        let sec_dot =document.querySelector('.sec-dot')
+        let min_dot =document.querySelector('.min-dot')
+        let hr_dot =document.querySelector('.hr-dot')
+        let h=new Date().getHours();
+        let m= new Date().getMinutes();
+        let s =new Date().getSeconds();
+        hh.style.strokeDashoffset = 510 - (510 * h) / 12;
+        // 12hrs clock
+        mm.style.strokeDashoffset = 630 - (630 * m) / 60;
+        // 12hrs clock
+        ss.style.strokeDashoffset = 760 - (760 * s) / 60;
+        // 12hrs clock  
+
+        sec_dot.style.transform=`rotateZ(${ s * 6}deg)`;
+      
+    })
+    </script>
   </body>
 </html>
