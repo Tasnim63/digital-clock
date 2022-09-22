@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+#time{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#time .circle{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#time .circle svg{
+    position: relative;
+}
+#time .circle svg:nth-child(1){
+    width: 250px;
+    height: 250px;
+} 
+#time .circle svg:nth-child(2){
+    width: 210px;
+    height: 210px;
+} 
+#time .circle svg:nth-child(3){
+    width: 170px;
+    height: 170px;
+} 
+#time .circle svg circle{
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke:var(--clr) ;
+}
